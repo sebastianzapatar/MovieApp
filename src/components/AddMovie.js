@@ -1,17 +1,16 @@
 import React,{useState} from 'react'
 
 export const AddMovie = ({setPeliculas}) => {
-    const [pelicula, setPelicula] = useState({id:0,nombre:'',imagen:'',informacion:''})
+    const [pelicula, setPelicula] = useState({id:Math.floor(Math.random()*(10000000)),nombre:'',imagen:'',informacion:''})
     const {nombre,imagen,informacion}=pelicula;
     const cambiar=({target})=>{
        setPelicula({...pelicula,[target.name]:target.value})
     }
     const manejarSubmit=(e) =>{
         e.preventDefault();
-        const id1=Math.floor(Math.random()*(10000000))
-        setPelicula({...pelicula,id:id1});
+        
         setPeliculas(peli=>[...peli,pelicula]);
-        setPelicula({id:0,nombre:'',imagen:'',informacion:''})
+        setPelicula({id:Math.floor(Math.random()*(10000000)),nombre:'',imagen:'',informacion:''})
         console.log(pelicula);
     }
     return (

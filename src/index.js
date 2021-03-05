@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+
+import './index.css';
+
+import reportWebVitals from './reportWebVitals';
+import {MovieList} from './components/MovieList'
+//import {CounterApp} from './components/hooks/CounterApp'
+import {ReactividadApp} from './components/hooks/ReactividadApp'
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  
+  <MovieList />  ,//Este es mi componente principal
   document.getElementById('root')
 );
 
